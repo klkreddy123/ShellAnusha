@@ -2,7 +2,7 @@
 
 FILENAME=$0
 DATE=$(date +%F)
-LOGFILE= /tmp/$FILENAME-$DATE.log
+LOGFILE=/tmp/$FILENAME-$DATE.log
 USERID=$(id -u)
 
 R="\e[31m"
@@ -26,10 +26,10 @@ else
     echo "Logged in user is root user"
 fi
 
-yum install postfix -y &>> $LOGFILE 
+yum install postfix -y &>>$LOGFILE 
 
 VALIDATE $? "Installing postfix"
 
-yum install nginx -y &>> $LOGFILE 
+yum install nginx -y &>>$LOGFILE 
 
 VALIDATE $? "Installing nginx"
