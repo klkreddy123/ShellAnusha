@@ -9,7 +9,7 @@ then
     exit 1
 fi
 
-yum install mysdql -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
 then
