@@ -2,5 +2,5 @@
 
 NAMES=("Mahesh" "Suresh" "Rajesh")
 
-echo "First Person name is:"${NAMES[0]}"
+echo "First Person name is: ${NAMES[0]}"
 echo "All persons names are: ${NAMES[@]}"
